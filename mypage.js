@@ -1,3 +1,10 @@
+document.getElementById('playAudio').addEventListener('click', function() {
+    var theAudio = document.getElementById('theAudio');
+    theAudio.play().catch(error => {
+        console.error("Erro ao reproduzir o áudio:", error);
+    });
+});
+
 var dataLocal = new Date().toLocaleDateString();
 console.log("Data local:", dataLocal);
 
