@@ -12,7 +12,7 @@ function exibirTextoNaTela(id, texto){
 function mudarAudio(meuAudio){
     var theAudio = document.getElementById('theAudio');
     if(theAudio){
-        var sourceUrl = meuAudio;
+        var sourceUrl = "audio/" + meuAudio;
         theAudio.src = sourceUrl;
         theAudio.load();
     } else {
@@ -30,17 +30,17 @@ function aCorQueQuero(id, cor){
 var horarioLocal = new Date().getHours();
 
 if ((horarioLocal >= 9) && (horarioLocal <= 15)){
-    document.body.style.backgroundImage = "url('CycleDay.png')";
-    mudarAudio("Threat_-_Heavy_Industrial.mp3");
+    document.body.style.backgroundImage = "url('imagem_rainworld/CycleDay.png')";
+    mudarAudio("audio/Threat_-_Heavy_Industrial.mp3");
     aCorQueQuero("cabeça", "black");
     aCorQueQuero("paragrafo", "black");
     aCorQueQuero("notinha", "black");
 } else if (((horarioLocal >= 5) && (horarioLocal < 9)) || ((horarioLocal > 15) && (horarioLocal <= 19))){
-    document.body.style.backgroundImage = "url('CycleSunset2.png')";
-    mudarAudio("Kayava.mp3");
+    document.body.style.backgroundImage = "url('imagem_rainworld/CycleSunset2.png')";
+    mudarAudio("audio/Kayava.mp3");
 } else {
-    document.body.style.backgroundImage = "url('CycleNight.png')";
-    mudarAudio("ELSE_IV.mp3");
+    document.body.style.backgroundImage = "url('imagem_rainworld/CycleNight.png')";
+    mudarAudio("audio/ELSE_IV.mp3");
     aCorQueQuero("cabeça", "#000080");
     aCorQueQuero("paragrafo", "#000080");
     aCorQueQuero("notinha", "#000080");
