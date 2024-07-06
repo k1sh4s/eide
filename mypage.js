@@ -11,6 +11,14 @@ console.log("Data local:", dataLocal);
 var horaLocal = new Date().toLocaleTimeString();
 console.log("Horário local:", horaLocal);
 
+//pegar o valor numerico da hora pro if/else
+var dataAtual = new Date();
+var horaAtual = dataAtual.getHours();
+console.log("Hora atual:", horaAtual);
+
+var horaNumerica = Number(horaAtual);
+console.log("Valor numérico da hora:", horaNumerica);
+
 function exibirTextoNaTela(id, texto){
     let campo = document.getElementById(id);
     campo.innerHTML = texto;
@@ -39,13 +47,13 @@ function aCorQueQuero(id, cor){
 
 var horarioLocal = new Date().getHours();
 
-if ((horarioLocal >= 9) && (horarioLocal <= 15)){
+if ((horaAtual >= 9) && (horaAtual <= 15)){
     document.body.style.backgroundImage = "url('imagem_rainworld/CycleDay.png')";
     mudarAudio("Threat_-_Heavy_Industrial.mp3");
     aCorQueQuero("cabeça", "black");
     aCorQueQuero("paragrafo", "black");
     aCorQueQuero("notinha", "black");
-} else if (((horarioLocal >= 5) && (horarioLocal < 9)) || ((horarioLocal > 15) && (horarioLocal <= 19))){
+} else if (((horaAtual >= 5) && (horaAtual < 9)) || ((horaAtual > 15) && (horaAtual <= 19))){
     document.body.style.backgroundImage = "url('imagem_rainworld/CycleSunset2.png')";
     mudarAudio("Kayava.mp3");
 } else {
