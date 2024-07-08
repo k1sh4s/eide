@@ -45,7 +45,11 @@ function aCorQueQuero(id, cor){
     elemento.classList.add("text-border2");
 }
 
-var horarioLocal = new Date().getHours();
+function mudarCorDoBotao(backCor, cor){
+    var elemento = document.getElementById("playAudio");
+    elemento.style.backgroundColor = backCor;
+    elemento.style.color = cor;
+}
 
 if ((horaAtual >= 9) && (horaAtual <= 15)){
     document.body.style.backgroundImage = "url('imagem_rainworld/CycleDay.png')";
@@ -53,9 +57,11 @@ if ((horaAtual >= 9) && (horaAtual <= 15)){
     aCorQueQuero("cabeça", "black");
     aCorQueQuero("paragrafo", "black");
     aCorQueQuero("notinha", "black");
+    mudarCorDoBotao("darkgreen", "white");
 } else if (((horaAtual >= 5) && (horaAtual < 9)) || ((horaAtual > 15) && (horaAtual <= 19))){
     document.body.style.backgroundImage = "url('imagem_rainworld/CycleSunset2.png')";
     mudarAudio("Kayava.mp3");
+    mudarCorDoBotao("orange", "brown");
 } else {
     document.body.style.backgroundImage = "url('imagem_rainworld/CycleNight.png')";
     mudarAudio("ELSE_IV.mp3");
@@ -63,4 +69,5 @@ if ((horaAtual >= 9) && (horaAtual <= 15)){
     aCorQueQuero("paragrafo", "#000080");
     aCorQueQuero("notinha", "#000080");
     aCorQueQuero("api", "#000080");
+    mudarCorDoBotao("midnightblue", "white");
 }
