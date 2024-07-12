@@ -3,85 +3,57 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Hello World!</title>
-        <style>
-            body {
-                
-                background-color: black;
-                background-image: url(imagem_rainworld/RW_UW_F01.png);
-                background-size:cover;
-                background-repeat:no-repeat;
-                color: white;    
-            }
-            
-            .text-border1 {
-            color: white;
-            text-shadow: 
-                -1px -1px 0 #000,  
-                 1px -1px 0 #000,
-                -1px  1px 0 #000,
-                 1px  1px 0 #000;
-            }
-            .text-border2 {
-            color: black;
-            text-shadow: 
-                -1px -1px 0 #ffffff,  
-                 1px -1px 0 #ffffff,
-                -1px  1px 0 #ffffff,
-                 1px  1px 0 #ffffff;
-            }
-
-            .absolutely-positioned1{
-                position: absolute;
-                top: 480px;
-                left: 750px;
-            }
-            .absolutely-positioned2{
-                position: absolute;
-                top: 415px;
-                left: 880px;
-            }
-            .absolutely-positioned3{
-                position: absolute;
-                top: 205px;
-                left: 715px;
-            }
-
-        </style>
+    
         <link rel="stylesheet" href="stilo.css">
 
     </head>
     <body>
+        <header> 
+            <h1 id="cabeça" class="text-border1">
+                Hello, world <img src="imagem_rainworld/Artificer_spoiler.png"> !
+            </h1>
+        </header>
+        <main>
+            <div class="absolutely-positioned1">
+                <img src="imagem_rainworld/Slugwalk.gif">
+            </div>
+
+            <div class="absolutely-positioned2">
+                <img src="imagem_rainworld/Lantern_Glow.png">
+            </div>
+    
+            <div class="absolutely-positioned3">
+                <img src="imagem_rainworld/Needleblinking.gif">
+            </div>
+            <br>
+            <p id="paragrafo" class="text-border1">
+                Olá, meu nome é Gerhard e eu estou aprendendo HTML.
+            </p>
+            <br>
+            <div id="api" style="float: right;">
+                <img src="imagem_rainworld/Roomfloodwakeup.gif">
+                <ul>
+                    <li id="hora"></li>
+                    <li id="data"></li>
+                    <li id="local"></li>
+                    <li id="fuso"></li>
+                </ul>
+            </div>
+            <br>
+            <img style="width: 7cm;" src="imagem_rainworld/slugcat_vibing.gif">
+            <br>
+            <br>
+            <div id="botao_de_musica">
+                <button id="playAudio">Musiquinha!</button>
+            </div>
+            <br>
+        </main>
         
-        <h1 id="cabeça" class="text-border1" style="font-size:xx-large; font-style:italic; font-family:'Kristen ITC'; color: white;">Hello, world <img src="imagem_rainworld/Artificer_spoiler.png"> !</h1>
-
-        <div class="absolutely-positioned1"><img src="imagem_rainworld/Slugwalk.gif"></div>
-
-        <div class="absolutely-positioned2"><img src="imagem_rainworld/Lantern_Glow.png"></div>
-
-        <div class="absolutely-positioned3"><img src="imagem_rainworld/Needleblinking.gif"></div>
-        <br>
-        <p id="paragrafo" class="text-border1" style="font-size: x-large; font-family:'Kristen ITC'; font-style: italic; color: white;">Olá, meu nome é Gerhard e eu estou aprendendo HTML.</p>
-        <br>
-        <div id="api" style="float: right;">
-            <img src="imagem_rainworld/Roomfloodwakeup.gif">
-            <ul>
-                <li id="hora" style="font-size: larger; font-family: 'Kristen ITC';"></li>
-                <li id="data" style="font-size: larger; font-family: 'Kristen ITC';"></li>
-                <li id="local" style="font-size: larger; font-family: 'Kristen ITC';"></li>
-                <li id="fuso" style="font-size: larger; font-family: 'Kristen ITC';"></li>
-            </ul>
-        </div>
-        <br>
-        <img style="width: 7cm;" src="imagem_rainworld/slugcat_vibing.gif">
-        <br>
-        <br>
-        <div id="botao_de_musica">
-            <button style="background-color: white; color:#000" id="playAudio">Musiquinha!</button>
-        </div>
-        <br>
-        <footer id="notinha" class="text-border1" style="font-family:'Kristen ITC';">Clique <a href="https://www.rainworldgame.com" target="blank">aqui</a> para conhecer o jogo Rain World.</footer>
-        
+        <footer id="notinha" class="text-border1">
+            Clique <a href="https://www.rainworldgame.com" target="blank">aqui</a> para conhecer o jogo Rain World.
+        </footer>
     </body>
 
     <audio id="theAudio" loop>

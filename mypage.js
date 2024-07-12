@@ -1,8 +1,12 @@
 document.getElementById('playAudio').addEventListener('click', function() {
     var theAudio = document.getElementById('theAudio');
+    if (theAudio.paused){
     theAudio.play().catch(error => {
         console.error("Erro ao reproduzir o áudio:", error);
     });
+    } else {
+        theAudio.pause();
+    }
 });
 
 var dataLocal = new Date().toLocaleDateString();
@@ -11,19 +15,25 @@ console.log("Data local:", dataLocal);
 var horaLocal = new Date().toLocaleTimeString();
 console.log("Horário local:", horaLocal);
 
-//pegar o valor numerico da hora pro if/else
+//horas
 var dataAtual = new Date();
+
+//pegar o valor numerico da hora pro if/else
 var horaAtual = dataAtual.getHours();
 console.log("Hora atual:", horaAtual);
 
+//outra forma de pegar valor numerico
 var horaNumerica = Number(horaAtual);
 console.log("Valor numérico da hora:", horaNumerica);
 
+
+//funcao pra colocar texto
 function exibirTextoNaTela(id, texto){
     let campo = document.getElementById(id);
     campo.innerHTML = texto;
 }
 
+//funçao pra mudar o audio
 function mudarAudio(meuAudio){
     var theAudio = document.getElementById('theAudio');
     if(theAudio){
@@ -39,18 +49,21 @@ function mudarAudio(meuAudio){
     
 }
 
+//função pra mudar a cor das palavras
 function aCorQueQuero(id, cor){
     var elemento = document.getElementById(id);
     elemento.style.color = cor;
     elemento.classList.add("text-border2");
 }
 
+//função pra mudar cor do botão
 function mudarCorDoBotao(backCor, cor){
     var elemento = document.getElementById("playAudio");
     elemento.style.backgroundColor = backCor;
     elemento.style.color = cor;
 }
 
+//script pras mudanças de acordo com horário
 if ((horaAtual >= 9) && (horaAtual <= 15)){
     document.body.style.backgroundImage = "url('imagem_rainworld/CycleDay.png')";
     mudarAudio("Threat_-_Heavy_Industrial.mp3");
